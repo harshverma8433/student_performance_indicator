@@ -1,0 +1,7 @@
+1 - create the evn first - conda create -p venv python==3.8
+
+2 - conda activate venv/
+
+3 - create setup.py - the setup.py file is a configuration script used for packaging and distributing Python projects. It is a key part of creating a Python package that can be easily installed using tools like pip.
+
+ 

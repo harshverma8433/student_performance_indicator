@@ -1,0 +1,21 @@
+end to end ml project
+1 - Data ingestion
+2 - Data Transformation
+3 - Model Trainer
+4 - Model Evaluation
+5 - Model Deployment
+
+CI/CD pipelines - refer to automated workflows used in software development to build, test, and deploy code changes efficiently and reliably. 
+Steps in a CI/CD Pipeline:-
+1 - Source Code Management:
+    Developers push code to a version control system like Git (e.g., GitHub, GitLab, or Bitbucket).
+2 - Build:
+    Compiles the code into an executable format or verifies dependencies (e.g., npm install, Maven build).
+3 - Test:
+    Executes unit tests, integration tests, and other quality assurance checks.
+4 - Integration:
+    Merges changes into a shared branch (e.g., main) after successful testing.
+5 - Deployment:
+    Automatically deploys the application to a staging or production environment.
+6 - Monitoring:
+    Tracks performance, errors, and other production issues
