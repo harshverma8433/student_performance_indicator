@@ -2,6 +2,18 @@
 
 2 - conda activate venv/
 
-3 - create setup.py - the setup.py file is a configuration script used for packaging and distributing Python projects. It is a key part of creating a Python package that can be easily installed using tools like pip.
+3 - create setup.py - setup.py is a module used to build and distribute Python packages. It typically contains information about the package, such as its name, version, and dependencies, as well as instructions for building and installing the package
 
- 
+4 - create requirements.txt file - where all the library are present and in last -e . is add which is used to automatically trigger the setup.py file
+
+5 - create src folder and __init__.py under the src and then create components folder under the src folder and also create the __init__.py under the components folder
+
+6 - create the data_ingestion , data_transformation, model_trainer under the components folder
+
+7 - create the pipeline folder under the src folder .. where two python files are created first is train_pipeline and second is predict_pipeline
+
+8 - create utils, logger and exception file under the src file
+
+9 - under the exception file ... create our own custom exception
+
+10 - under the logger file ...it is used any execution that probably happen we should be able to log all this information the execution everything in the some file  so that we will be able to tract if there is some errors
