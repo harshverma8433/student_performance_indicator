@@ -1,0 +1,133 @@
+<html>
+    <head>
+
+            <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    </head>
+<body>
+    <div class="login bg-black text-white min-h-screen">
+       <h1 class="text-5xl text-center py-4 pb-6">Student Exam Performance Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post" class="flex flex-col items-center">
+      
+        <div class="flex mb-3 w-full justify-center pl-24">
+
+            <div class=" text-black flex  flex-col justify-center  items-center w-full">
+                <label class=" text-white text-2xl  mr-60 pr-4 pl-32 w-full ">Gender</label>
+                <select  name="gender" class="text-xl h-10 pl-2  black w-2/3" placeholder="Enter you Gender" required>
+                    <option class="placeholder " selected disabled value="" class="text-black">Select your Gender</option>
+                    <option value="male" class="text-black ">
+                        Male
+                    </option>
+                    <option value="female" class="text-black ">
+                        Female
+                    </option>
+                </select>
+            </div>
+    
+            <div class="text-black flex  flex-col justify-center   w-full">
+                <label class="text-white text-2xl flex items-center">Race or Ethnicity</label>
+                <select class="text-xl h-10 pl-2  black w-2/3" name="ethnicity" placeholder="Enter you ethnicity" required>
+                    <option class="placeholder" selected disabled value="">Select Ethnicity</option>
+                    <option value="group A">
+                        Group A
+                    </option>
+                    <option value="group B">
+                        Group B
+                    </option>
+                    <option value="group C">
+                        Group C
+                    </option>
+                    <option value="group D">
+                        Group D
+                    </option>
+                    <option value="group E">
+                        Group E
+                    </option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="flex mb-3 w-full mt-8 justify-center pl-24">
+            
+        <div class="text-black flex  flex-col justify-center items-center    w-full">
+            <label class="text-white text-2xl flex items-center pr-48">Parental Level of Education</label>
+            <select class="text-xl h-10 pl-2  black w-2/3" name="parental_level_of_education"
+                placeholder="Enter you Parent Education" required>
+                <option class="placeholder" selected disabled value="">Select Parent Education</option>
+                <option value="associate's degree">
+                    associate's degree
+                </option>
+                <option value="bachelor's degree">
+                    bachelor's degree
+                </option>
+                <option value="high school">
+                    high school
+                </option>
+                <option value="master's degree">
+                    master's degree
+                </option>
+                <option value="some college">
+                    some college
+                </option>
+                <option value="some high school">
+                    some high school
+                </option>
+            </select>
+        </div>
+        <div class="text-black flex  flex-col justify-center w-full">
+            <label class="text-white text-2xl flex items-center">Lunch Type</label>
+            <select class="text-xl h-10 pl-2  black w-2/3" name="lunch" placeholder="Enter you Lunch" required>
+                <option class="placeholder" selected disabled value="">Select Lunch Type</option>
+                <option value="free/reduced">
+                    free/reduced
+                </option>
+                <option value="standard">
+                    standard
+                </option>
+            </select>
+        </div>
+        </div>
+
+        <div class="flex mb-3 w-full mt-8 justify-center pl-24">
+
+            <div class="text-black flex  flex-col justify-center items-center    w-full">
+                <label class="text-white text-2xl flex items-center pr-56">Test preparation Course</label>
+                <select class="text-xl h-10  pl-2 black w-2/3" name="test_preparation_course" placeholder="Enter you Course"
+                    required>
+                    <option class="placeholder" selected disabled value="">Select Test_course</option>
+                    <option value="none">
+                        None
+                    </option>
+                    <option value="completed">
+                        Completed
+                    </option>
+                </select>
+            </div>
+            <div class="text-black flex  flex-col justify-center     w-full">
+                <label class="text-white text-2xl flex items-center">Writing Score out of 100</label>
+                <input class="text-xl h-10 text-black pl-2  black w-2/3" type="number" name="reading_score"
+                    placeholder="Enter your Reading score" min='0' max='100' />
+            </div>
+        </div>
+
+
+        <div class="text-black flex mt-8  flex-col justify-center items-center    w-full">
+            <label class="text-white text-2xl flex items-center">Reading Score out of 100</label>
+            <input class="w-1/3 text-xl text-black h-10  pl-2" type="number" name="writing_score"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+
+
+        <div class="text-black flex  flex-col justify-center items-center   mt-8  w-full">
+            <input style="background-color: #007BFF;" class=" rounded-xl px-10 py-2 hover:bg-blue-500  cursor-pointer " type="submit" value="Predict your Maths Score" required />
+        </div>
+    </form>
+    <h2 class="text-4xl  text-center ">
+       The  prediction is - {{results}}
+    </h2>
+   <body>
+</html>
