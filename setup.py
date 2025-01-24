@@ -18,6 +18,6 @@ setup(
     author="Harsh Verma",
     author_email="harshverma8433@gmail.com",
     packages=find_packages(),
-    install_requires=get_requirem ents("requirements.txt")
+    install_requires=get_requirements("requirements.txt")
     
 )

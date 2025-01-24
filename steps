@@ -17,3 +17,5 @@
 9 - under the exception file ... create our own custom exception
 
 10 - under the logger file ...it is used any execution that probably happen we should be able to log all this information the execution everything in the some file  so that we will be able to tract if there is some errors
+
+11 - create a notebook of EDA and model trainer and upload the dataset also
